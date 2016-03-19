@@ -1,0 +1,16 @@
+(require 'ox-latex)
+
+(require 'ox-beamer)
+(require 'ox-md)
+
+(setq org-latex-listings t)
+
+(setq org-export-allow-bind-keywords t)
+
+(setq org-latex-listings 'minted)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+
+(setq org-latex-minted-options
+           '(("frame" "lines")
+             ("fontsize" "\\scriptsize")
+             ("linenos" "")))
